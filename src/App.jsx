@@ -87,9 +87,9 @@ function App() {
             <div className="flex justify-center m-4 max-sm:mx-0 max-sm:my-2">
               <h2 className='text-xl font-bold mx-2 max-sm:text-base max-sm:mx-1 max-sm:hidden'>Add a Todo</h2>
 
-              <input value={todo} onChange={handleChange} className='w-[62%] max-md:w-[80%] rounded-md px-2 text-cyan-950 font-bold bg-gray-400 opacity-70' type="text" />
+              <input value={todo} onChange={handleChange} className='w-[62%] max-md:w-[80%] rounded-md px-2 text-cyan-950 font-bold bg-gray-400 opacity-70 text-lg ' type="text" />
 
-              <button onClick={handleAdd} disabled={todo.length < 1} className='bg-cyan-600 text-cyan-200 text-xl font-bold rounded-md mx-2 px-1 py-1 transition-all duration-400 disabled:opacity-30 hover:bg-cyan-300 hover:text-cyan-800  '><FaPlus /></button>
+              <button onClick={handleAdd} disabled={todo.length < 1} className='bg-cyan-600 text-cyan-200 text-xl drop-shadow-4xl font-bold rounded-md mx-2 px-1 py-1 transition-all duration-400 disabled:opacity-30 hover:bg-cyan-300 hover:text-cyan-800  '><FaPlus /></button>
             </div>
 
           </div>
@@ -114,7 +114,7 @@ function App() {
                   <div className={item.isCompleted ? "line-through" : ""}>{item.todo}</div>
                 </div>
 
-                <div className="button">
+                <div className="button  drop-shadow-4xl">
                   <button onClick={(e) => handleEdit(e, item.id)} className='bg-slate-400 text-slate-700 text-xl font-bold rounded-md mx-1 my-2 px-1 py-1 transition-all duration-400 hover:text-slate-300 hover:bg-slate-600 '><FaEdit /></button>
                   <button onClick={(e) => handleDelete(e, item.id)} className='bg-red-400 text-red-700 text-xl font-bold rounded-md mx-1 my-2 px-1 py-1 transition-all duration-400 hover:text-red-300 hover:bg-red-600 '><MdDeleteForever /></button>
                 </div>
