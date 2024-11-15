@@ -107,7 +107,7 @@ function App() {
 
             {todos.map(item => {
 
-              return (showFinished || !item.isCompleted) && < div key={item.id} className="todo my-2 px-2 flex justify-between items-center rounded-md bg-cyan-600 hover:bg-cyan-700 opacity-80 text-lg transition-all duration-300 drop-shadow-2xl hover:drop-shadow-4xl" >
+              return (showFinished || !item.isCompleted) && < div key={item.id} className="todo my-2 px-2 flex justify-between text-cyan-50 font-thin items-center rounded-md bg-cyan-600 hover:bg-cyan-700 opacity-80 text-lg transition-all duration-300 drop-shadow-2xl hover:drop-shadow-4xl" >
 
                 <div className='flex max-w-[55vw] overflow-hidden'>
                   <input name={item.id} onChange={handleCheckbox} className='mx-2' type="checkbox" checked={item.isCompleted} />
