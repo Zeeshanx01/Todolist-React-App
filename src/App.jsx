@@ -1,9 +1,11 @@
 import { useState, useEffect } from 'react'
 import NavBar from './components/NavBar'
+import Footer from './components/Footer';
 import { v4 as uuidv4 } from 'uuid';
 import { FaEdit } from "react-icons/fa";
 import { MdDeleteForever } from "react-icons/md";
 import { FaPlus } from "react-icons/fa";
+
 
 function App() {
 
@@ -75,12 +77,18 @@ function App() {
 
   return (
     <>
-      <div className='duration-300 min-h-screen bg-cyan-950'>
-        <NavBar />
+      <NavBar />
+      <div className='duration-300 min-h-screen p-1 bg-cyan-950'>
 
         <div className="container mx-auto my-5 p-5  rounded-xl bg-cyan-900 opacity-85 h--[80vh] drop-shadow-2xl">
 
-          <div className="addTodo  text-cyan-100  sticky top-8 py-8 w-full bg-cyan-800 rounded-lg drop-shadow-2xl z-30">
+
+
+
+
+
+
+          <div className="addTodo  text-cyan-100  sticky top-2 py-4 w-full bg-cyan-800 rounded-lg bg-opacity-60 backdrop-blur-md drop-shadow-2xl z-30">
 
             <h1 className='duration-300  m-4 font-bold text-2xl max-sm:m-0 font-serif text-center'>ZenTasks - Manage your tasks at one place</h1>
 
@@ -94,13 +102,31 @@ function App() {
 
           </div>
 
+
+
+
+
+
           <div className='duration-300 bg-cyan-400 opacity-60 mx-auto my-3 rounded-full w-[90%] h-[1px]'></div>
+
+
+
+
           <div className="text-cyan-100 text-lg">
-            <input onClick={toggleFinished} type="checkbox" value={showFinished} /> Show Finished 
+            <input onClick={toggleFinished} type="checkbox" value={showFinished} /> Show Finished
           </div>
+
+
+
+
           <div className='duration-300 flex justify-center'>
             <h2 className="text-3xl font-bold text-cyan-100">Your Tasks</h2>
           </div>
+
+
+
+
+
           <div className="todos bg-blackk max-h--[55vh] overflow-auto">
 
             {todos.length === 0 && <div className='duration-300 text-cyan-200 opacity-50 m-4 y text-2xl flex justify-center items-center'>No Todos to display</div>}
@@ -124,8 +150,15 @@ function App() {
             })}
           </div>
 
+
+
+
+
         </div >
+
       </div>
+
+      <Footer />
     </>
   )
 }

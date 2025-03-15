@@ -40,3 +40,30 @@
 .read-the-docs {
   color: #888;
 }
+
+@keyframes border-glow {
+  0% { opacity: 0.3; }
+  50% { opacity: 1; }
+  100% { opacity: 0.3; }
+}
+
+@keyframes beam {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+.animate-border-glow {
+  animation: border-glow 3s ease-in-out infinite;
+}
+
+.animate-beam {
+  animation: beam 2.5s linear infinite;
+}
+
+.shadow-glow {
+  box-shadow: 0 0 15px rgba(34, 211, 238, 0.3);
+}
+
+.hover\:shadow-glow:hover {
+  box-shadow: 0 0 20px rgba(34, 211, 238, 0.5);
+}
